@@ -20,7 +20,7 @@ body
   font-size: 16px
   min-width: 320px
   position: relative
-  line-height: 1.5
+  line-height: 1.35
   font-family: $default-font
   overflow-x: hidden
   color: $text
@@ -48,18 +48,28 @@ a, a:hover, a:active, a:focus
   text-decoration: none
 
 a, li, button
-  outline: none
+  outline: none!important
 
 ul
   list-style-type: none
   padding: 0
-
-//pixel-glass custom
-//html
-//  background-repeat: no-repeat
-//  background-position: 50% 0
-//  background-image: url('../img/layout/test.png')
-
 // ======= END TEMPLATE STYLES =======
+
+body
+  //display: flex
+
+.page-wrap
+  display: flex
+
+.sidebar
+  width: 345px
+  height: 200px
+
+.page-content
+  width: calc(100% - 345px)
+
+.page-container
+  position: relative
+
 
 

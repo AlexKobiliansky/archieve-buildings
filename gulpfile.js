@@ -39,7 +39,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		// 'app/libs/pixel-glass/pixel-glass.js',
+		'app/libs/smartmenus/jquery.smartmenus.min.js',
+		'app/libs/owl-carousel/owl.carousel.min.js',
+		'app/libs/mmenu/jquery.mmenu.all.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
@@ -80,7 +82,7 @@ if (gulpversion == 3) {
 if (gulpversion == 4) {
 	gulp.task('watch', function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
-		gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
+		gulp.watch(['libs/**/*.js', 'app/**/common.js'], gulp.parallel('scripts'));
 		gulp.watch('app/*.html', gulp.parallel('code'))
 	});
 	gulp.task('default', gulp.parallel('watch', 'styles', 'scripts', 'browser-sync'));

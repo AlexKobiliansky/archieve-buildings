@@ -3,17 +3,139 @@
 
 /*==========  Desktop First  ==========*/
 
+@media screen and (max-width: 1500px)
+
+  .intro-item-chars .char
+    min-width: 170px
+    font-size: 18px
+    margin-right: 40px
+
+  .intro-item-title
+    font-size: 36px
+
+  .main-mnu
+    a
+      font-size: 14px
+
+  .recall
+    margin-left: 25px
+    .phone
+      font-size: 24px
+
+@media screen and (max-width: 1300px)
+  .main-mnu
+    display: none
+
+  .toggle-mnu
+    display: inline-block
+  .recall
+    float:  right
+
+  .top-line
+    display: block
+
+  .intro-slider
+    top: 0
+  .s-intro
+    margin-top: 20px
+
 // ≥1200px
 +media-breakpoint-down(lg)
+  .main-head
+    padding-right: 60px
+
+  .intro-slider
+    .owl-nav
+      font-size: 38px
+      top: 250px
+      right: -60px
+      button.owl-prev, button.owl-next
+        width: 60px
+        height: 60px
+        line-height: 38px
+        padding-bottom: 5px
+        display: inline-block
+        span
+          position: relative
+          top: -2px
+    .owl-dots
+      position: absolute
+      top: 365px
+      right: -33px
+
+  .intro-item
+    height: 700px
+    &-title
+      margin-bottom: 45px
+      font-size: 32px
+
+  .intro-content
+    left: 50px
+    bottom: 45px
 
 // ≥992px
 +media-breakpoint-down(md)
+  .page-wrap
+    flex-direction: column-reverse
+  .page-content
+    width: 100%
+  .sidebar
+    width: 100%
+    display: none
+  .main-head
+    //padding-left: 15px
 
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .intro-item
+    &-title
+      font-size: 26px
+    &-num
+      margin-bottom: 10px
+
 // ≥576px
 +media-breakpoint-down(xs)
+
+@media screen and (max-width: 480px)
+
+  .recall
+    margin-right: 15px
+
+  .intro-item
+    min-height: 700px
+    padding: 15px
+    &-title
+      font-size: 22px
+      padding-right: 15px
+      margin-bottom: 30px
+    &-chars
+      .char
+        font-size: 14px
+
+  .intro-content
+    left: 25px
+    bottom: 25px
+
+  .main-head
+    padding-left: 0
+    padding-right: 0
+
+  .intro-slider
+    .owl-nav
+      display: none
+    .owl-dots
+      right: auto
+      top: auto
+      left: 0
+      bottom: -35px
+      width: 100%
+      text-align: center
+      button.owl-dot
+        display: inline-block
+        margin-right: 15px
+        &:last-child
+          margin-right: 0
 
 
 /*==========  Mobile First  ==========*/

@@ -1,0 +1,86 @@
+.s-intro
+  color: #fff
+
+
+.intro-slider
+  position: relative
+  top: -16px
+  .owl-nav
+    font-size: 48px
+    position: absolute
+    top: 350px
+    right: -77px
+    button.owl-prev, button.owl-next
+      width: 77px
+      height: 77px
+      line-height: 77px
+      background-color: $accent-green
+      color: #fff
+    button.owl-prev
+      color: $accent-green
+      background-color: $accent-darkblue
+  .owl-dots
+    position: absolute
+    top: 490px
+    right: -39px
+    .owl-dot
+      display: block
+      width: 7px
+      height: 7px
+      background-color: $accent-darkblue
+      margin-bottom: 12px
+      &.active
+        background-color: $accent-green
+
+.intro-item
+  position: relative
+  +bg-cover()
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    z-index: 2
+    background: linear-gradient(rgba($accent-darkblue, .2) 50%, rgba($accent-darkblue, .6) 70%, rgba($accent-darkblue, .9) 90%, $accent-darkblue 100%)
+
+.intro-content
+  z-index: 3
+  position: absolute
+  bottom: 90px
+  left: 65px
+  span
+    color: $accent-green
+
+.intro-item
+  height: 820px
+  &-num
+    font-size: 20px
+    margin-bottom: 30px
+  &-title
+    font-size: 40px
+    font-family: "gothamProBlack", sans-serif
+    text-transform: uppercase
+    line-height: 1.2
+    margin-bottom: 70px
+    display: block
+    padding-right: 15px
+  &-chars
+    .char
+      display: inline-block
+      min-width: 180px
+      margin-right: 60px
+      border-top: 1px solid #fff
+      padding-top: 15px
+      margin-bottom: 20px
+      font-family: "gothamProBlack", sans-serif
+      text-transform: uppercase
+      font-size: 20px
+    .svg
+      fill: $accent-green
+      width: 21px
+      display: inline-block
+      margin-right: 9px
+      position: relative
+      top: 1px

@@ -1,0 +1,168 @@
+.main-head
+  padding-right: 75px
+
+.top-line
+  display: flex
+  justify-content: space-between
+
+.main-mnu
+  width: 100%
+  ul
+    display: flex
+    justify-content: space-around
+    position: relative
+  li
+    flex-grow: 1
+    text-align: center
+    position: relative
+    a
+      display: block
+      padding: 28px 0 21px
+      font-weight: bold
+      text-transform: uppercase
+      border-bottom: 7px solid transparent
+      +mt(.3s)
+    &:hover
+      &>a
+        color: $accent-green
+        border-color: $accent-green
+      //&>ul
+      //  opacity: 1
+    ul
+      display: block
+      visibility: hidden
+      opacity: 0
+      padding: 10px 0
+      border: 1px solid #cecece
+      border-top: 7px solid $accent-green
+      position: absolute
+      top: 70px
+      width: 300px
+      box-shadow: 1px 1px 1px #cecece
+      +mt(.3s)
+      background-color: #fff
+      z-index: 5
+      a
+        padding: 5px 12px
+        border: none
+        text-align: left
+        font-size: 14px
+    &:hover
+      ul
+        visibility: visible
+        opacity: 1
+
+
+#mobile-mnu
+  //z-index: 10
+
+.vert-mnu
+  padding-left: 35px
+  li
+    font-size: 20px
+    text-transform: uppercase
+.sm-simple a, .sm-simple a:active, .sm-simple a:focus, .sm-simple a:hover
+  font-family: "gothamProBlack", sans-serif!important
+  padding-left: 0
+.sm-simple.sm-vertical a .sub-arrow
+  display: none!important
+
+
+
+.recall
+  margin-left: 50px
+  text-align: right
+  white-space: nowrap
+  font-weight: bold
+  margin-top: 10px
+  .phone
+    display: block
+    font-size: 30px
+    +mt(.3s)
+    &:hover
+      color: $accent-green
+  .callback
+    color: $accent-green
+    text-transform: uppercase
+    background: -webkit-linear-gradient(left, #8ec328, #46ae37)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      width: 100%
+      height: 1px
+      background: linear-gradient(left, #8ec328, #46ae37)
+      left: 0
+
+
+.toggle-mnu
+  display: none
+  width: 28px
+  height: 28px
+  margin-top: 27px
+  margin-left: 15px
+  span:after, span:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+  span:after
+    top: 18px
+  span
+    position: relative
+    display: block
+  span, span:after, span:before
+    width: 100%
+    height: 4px
+    background-color: $accent-darkblue
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  &.on span
+    background-color: transparent
+  &.on span:before
+    transform: rotate(45deg) translate(-1px, 0px)
+  &.on span:after
+    transform: rotate(-45deg) translate(6px, -7px)
+
+.mm-logo
+  margin-left: auto
+  margin-right: auto
+  height: 190px
+
+.mm-navbars_top
+  height: 200px
+
+.mm-menu_navbar_top-4 .mm-panels
+  top: 200px
+
+.mm-listview
+  li
+    .mm-listitem a
+      font-size: 14px
+
+.mm-listitem>a
+  font-size: 20px
+  font-weight: 700
+  text-transform: uppercase
+  padding-top: 15px
+  padding-bottom: 15px
+  +mt(.3s)
+  &:hover
+    color: $accent-green
+
+.mm-listitem .mm-btn_next:not(.mm-btn_fullwidth)
+  height: 50px
+
+.mm-menu .mm-listitem_opened>.mm-panel
+  padding-top: 0
+  border-top: 1px solid rgba(0,0,0,.1)
+
+.mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened~.mm-slideout
+  cursor: pointer
+
+.mm-wrapper_opening [class*=mm-menu_pagedim].mm-menu_opened~.mm-page__blocker
+  opacity: .6
