@@ -1,0 +1,107 @@
+.s-archieve
+  margin-top: 60px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 65px
+    width: calc(100% - 65px)
+    height: 1px
+    background-color: #d2d2d2
+  &:after
+    content: ''
+    position: absolute
+    width: 39px
+    height: 44px
+    background: url('../img/icons/s-archieve-icon.png') no-repeat center center
+    background-size: cover
+    left: 0
+    top: 40px
+  .m-container
+    padding: 40px 0 120px 50px
+  .btn
+    display: block
+    text-align: center
+    padding: 20px
+    font-size: 18px
+    font-family: "gothamProBlack", sans-serif
+    margin-top: 15px
+
+
+.arch-num
+  position: absolute
+  right: 0
+  top: 50px
+  font-size: 30px
+  text-transform: uppercase
+  span
+    font-weight: bold
+
+.arch-wrap
+  display: flex
+  flex-wrap: wrap
+  margin-top: 55px
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 65px
+    height: 105px
+    background: url('../img/after-img-1.png') no-repeat center center
+    background-size: cover
+    right: 92px
+    bottom: -136px
+    z-index: -1
+.arch-item
+  position: relative
+  display: block
+  &-bg
+    height: 242px
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+  &-content
+    position: relative
+    top: 12px
+    left: 12px
+    width: calc(100% - 24px)
+    background-color: transparent
+    padding: 24px
+    +mt(.3s)
+    margin-bottom: 38px
+  &-num
+    font-size: 14px
+    font-weight: 700
+    color: $accent-green
+    text-transform: uppercase
+    margin-bottom: 80px
+    opacity: 0
+    +mt(.3s)
+  &-icon
+    margin-left: 17px
+    margin-bottom: 30px
+    opacity: 0
+    +mt(.3s)
+    .svg
+      fill: $accent-green
+      width: 90px
+      display: inline-block
+      height: auto
+  &-title
+    font-size: 20px
+    text-transform: uppercase
+    font-weight: 700
+    text-align: center
+    +mt(.3s)
+  &:hover
+    .arch-item-content
+      background-color: $accent-darkblue
+    .arch-item-num
+      opacity: 1
+    .arch-item-icon
+      opacity: 1
+    .arch-item-title
+      color: #fff
+

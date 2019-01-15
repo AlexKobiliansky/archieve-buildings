@@ -5,6 +5,13 @@
 
 @media screen and (max-width: 1500px)
 
+  .arch-num
+    font-size: 20px
+    top: 100px
+
+  .m-container
+    margin-right: 15px
+
   .intro-item-chars .char
     min-width: 170px
     font-size: 18px
@@ -75,6 +82,11 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-archieve
+    &:after
+      left: 10px
+
   .page-wrap
     flex-direction: column-reverse
   .page-content
@@ -88,16 +100,54 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+
+
+  .section-title
+    font-size: 28px
+
+  .arch-item-title
+    font-size: 16px
+
+  .arch-num
+    top: 90px
+
   .intro-item
     &-title
       font-size: 26px
     &-num
       margin-bottom: 10px
 
-// ≥576px
-+media-breakpoint-down(xs)
-
 @media screen and (max-width: 480px)
+
+  .s-intro
+    &:after
+      display: none
+
+  .s-archieve
+    .m-container
+      padding-left: 0
+      padding-top: 60px
+    &:after
+      display: none
+    &:before
+      left: 0
+      width: 100%
+    .btn
+      font-size: 16px
+      margin-top: 0
+
+  .m-container
+    margin-left: 15px
+    border: none
+
+  .arch-wrap
+    margin-top: 28px
+    &:after
+      right: 60px
+      bottom: -117px
+
+  .arch-num
+    top: 22px
 
   .recall
     margin-right: 15px
@@ -128,7 +178,7 @@
       right: auto
       top: auto
       left: 0
-      bottom: -35px
+      bottom: -44px
       width: 100%
       text-align: center
       button.owl-dot
@@ -136,6 +186,9 @@
         margin-right: 15px
         &:last-child
           margin-right: 0
+
+  .section-title
+    font-size: 22px
 
 
 /*==========  Mobile First  ==========*/

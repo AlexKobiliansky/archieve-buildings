@@ -55,9 +55,6 @@ ul
   padding: 0
 // ======= END TEMPLATE STYLES =======
 
-body
-  //display: flex
-
 .page-wrap
   display: flex
 
@@ -70,6 +67,30 @@ body
 
 .page-container
   position: relative
+
+.m-container
+  border-left: 1px solid #d2d2d2
+  margin-left: 65px
+  max-width: 1200px
+  position: relative
+
+.section-title
+  font-family: "gothamProBlack", sans-serif
+  font-size: 40px
+
+.btn
+  display: inline-block
+  text-transform: uppercase
+  +mt(.3s)
+  cursor: pointer
+
+.btn-green
+  background-color: $accent-green
+  &:hover
+    background-color: darken($accent-green, 5%)
+
+.btn-shadow
+  box-shadow: 5px 5px 30px 3px rgba($accent-green, .7)
 
 
 
