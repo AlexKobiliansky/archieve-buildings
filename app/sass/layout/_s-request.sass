@@ -1,0 +1,66 @@
+.s-request
+  position: relative
+  .m-container
+    padding: 45px 0 45px 45px
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 65px
+    width: calc(100% - 65px)
+    height: 1px
+    background-color: #d2d2d2
+  &:after
+    content: ''
+    position: absolute
+    width: 40px
+    height: 40px
+    background: url('../img/icons/s-request-icon.png') no-repeat center center
+    background-size: cover
+    left: 0
+    top: 45px
+
+.request-wrap
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 65px
+    height: 105px
+    background-image: url('../img/after-img-1.png')
+    +bg-cover()
+    left: 102px
+    top: -79px
+  &:after
+    content: ''
+    position: absolute
+    width: 572px
+    height: 503px
+    +bg-cover()
+    background-image: url('../img/request-after-img.png')
+    top: -123px
+    right: -290px
+
+.request-form
+  background-color: $accent-darkblue
+  color: #fff
+  padding: 45px 250px 60px 100px
+  font-size: 24px
+  h2
+    font-family: "gothamProBlack", sans-serif
+    font-size: 40px
+    margin-bottom: 20px
+  .form-labels-wrap
+    margin-top: 35px
+  input
+    background-color: $accent-darkblue
+    color: #fff
+    border: 1px solid $accent-green
+    padding: 10px 20px
+    margin-right: 25px
+    width: 305px
+    &::placeholder
+      color: #fff
+  .btn
+    height: 54px
+    width: 240px
