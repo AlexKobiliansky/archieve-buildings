@@ -5,6 +5,12 @@
 
 @media screen and (max-width: 1500px)
 
+  .newproject-item-desc
+    padding: 15px
+    font-size: 14px
+    .desc-left
+      font-size: 22px
+
   .request-form
     font-size: 20px
     input
@@ -65,6 +71,14 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .newprojects-wrap:before
+    left: 35px
+
+  .all-newprojects
+    margin-top: 0
+    top: -60px
+
   .main-head
     padding-right: 60px
 
@@ -100,6 +114,10 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-newprojects
+    &:after
+      left: 10px
+
   .s-archieve
     &:after
       left: 10px
@@ -121,6 +139,15 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .newproject-item
+    &-img
+      height: 280px
+    &-desc
+      padding: 30px
+
+  .all-newprojects
+    top: 0
+    margin-top: 30px
 
   .request-form
     font-size: 16px
@@ -150,6 +177,24 @@
       margin-bottom: 10px
 
 @media screen and (max-width: 480px)
+
+  .newprojects-wrap
+    margin-top: 30px
+
+  .s-newprojects
+    &:after
+      display: none
+    &:before
+      left: 0
+      width: 100%
+    .m-container
+      padding-left: 0
+
+  .newproject-item
+    &-img
+      height: 240px
+    &-desc
+      padding: 15px
 
   .request-wrap:before
     left: 27px
