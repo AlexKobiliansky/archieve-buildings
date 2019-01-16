@@ -1,0 +1,88 @@
+.main-foot
+  background-color: $accent-darkblue
+  color: #fff
+  padding-top: 55px
+  padding-bottom: 110px
+  padding-left: 345px
+  position: relative
+  .m-container
+    border: none
+  h3
+    font-family: "gothamProBlack", sans-serif
+    font-size: 24px
+    text-transform: uppercase
+    color: $accent-green
+    padding-left: 25px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: 7px
+      height: 7px
+      background-color: $accent-green
+      left: 0
+      top: 12px
+  ul
+    padding-left: 25px
+    padding-top: 7px
+    padding-bottom: 7px
+    li
+      padding-top: 7px
+      padding-bottom: 7px
+      ul
+        color: $accent-green
+        padding-bottom: 0
+        li
+          &:before
+            content: '\2014'
+            display: inline-block
+            margin-right: 7px
+        li:last-child
+          padding-bottom: 0
+    a
+      +mt(.3s)
+      &:hover
+        color: $accent-green
+
+.logo-wrapper
+  width: 310px
+  height: 410px
+  background-color: $accent-green
+  color: #000
+  position: absolute
+  left: 0
+  top: -40px
+  padding-left: 33px
+  padding-right: 28px
+  .logo-name
+    padding-top: 35px
+    position: relative
+    font-family: "gothamProBlack", sans-serif
+    font-size: 24px
+    text-transform: uppercase
+    margin-bottom: 120px
+    &:before
+      content: ''
+      position: absolute
+      width: 35px
+      height: 35px
+      +bg-cover()
+      background-image: url('../img/logo-wrap-img.png')
+      left: 0
+      top: -13px
+  .logo-contacts
+    a
+      display: block
+      text-align: right
+    .phone
+      font-size: 24px
+      font-weight: 700
+    .recall
+      color: #fff
+      font-weight: 700
+      text-decoration: underline
+      text-transform: uppercase
+      margin-top: 0
+      line-height: 1.5
+      &:hover
+        text-decoration: none

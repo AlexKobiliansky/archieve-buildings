@@ -12,6 +12,8 @@ $(function() {
             nav:true,
             items: 1
         });
+
+        $('.preloader').fadeOut(600);
     });
 
 
@@ -101,4 +103,7 @@ $(function() {
         });
         return false;
     });
+
+
+
 });

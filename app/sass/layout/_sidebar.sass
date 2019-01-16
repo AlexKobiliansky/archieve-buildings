@@ -1,6 +1,22 @@
 .sidebar
   padding-left: 34px
   padding-top: 18px
+  overflow: hidden
+  position: relative
+
+.side-content
+  overflow: hidden
+  width: 100px
+
+.side-wrap
+  position: fixed
+  overflow-y: scroll
+  overflow-x: hidden
+  height: 100%
+  -ms-overflow-style: none  // IE 10+
+  overflow: -moz-scrollbars-none  // Firefox
+  &::-webkit-scrollbar
+    display: none  // Safari and Chrome
 
 .side-mnu
   padding-left: 35px
