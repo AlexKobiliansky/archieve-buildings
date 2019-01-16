@@ -1,0 +1,13 @@
+.s-breadcrumbs
+  a
+    display: inline-block
+    position: relative
+    +mt(.3s)
+    &:hover
+      color: $accent-green
+    &:after
+      content: ' - '
+      color: #000
+    &:last-child
+      &:after
+        display: none

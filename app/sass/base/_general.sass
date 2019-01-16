@@ -67,17 +67,51 @@ ul
 
 .page-container
   position: relative
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+.page-wrap
+  flex: 1 0 auto
 
 .m-container
-  border-left: 1px solid #d2d2d2
   margin-left: 65px
   max-width: 1200px
   position: relative
 
+.homepage
+  .m-container
+    border-left: 1px solid #d2d2d2
+
+
 .section-title
   font-family: "gothamProBlack", sans-serif
   font-size: 40px
+  margin-bottom: 50px
 
+.section-desc
+  padding-left: 60px
+  min-height: 50vh
+  padding-bottom: 40px
+  p
+    margin-bottom: 25px
+  a
+    color: $accent-green
+    &:hover
+      text-decoration: underline
+  li
+    position: relative
+    left: 45px
+    margin-bottom: 20px
+    width: calc(100% - 45px)
+    &:before
+      content: ''
+      position: absolute
+      width: 18px
+      height: 14px
+      +bg-cover()
+      background-image: url('../img/icons/check-icon.png')
+      left: -33px
 .btn
   display: inline-block
   text-transform: uppercase
