@@ -117,13 +117,28 @@ ul
   text-transform: uppercase
   +mt(.3s)
   cursor: pointer
+  border: none
+  &.disabled
+    filter: grayscale(.7)
+    color: #fff
 
 .btn-green
   background-color: $accent-green
   border: none
   &:hover
     background-color: darken($accent-green, 5%)
+  &.disabled
+    background-color: darken($accent-green, 5%)
 
+.btn-grad
+  background: linear-gradient(left,#8ec328,#46ae37)
+  padding: 10px
+  min-width: 180px
+  filter: none
+  &:hover
+    filter: brightness(.85)
+  &.disabled
+    background: linear-gradient(left,#8ec328,#46ae37)
 .btn-shadow
   box-shadow: 5px 5px 30px 3px rgba($accent-green, .7)
 
@@ -176,6 +191,21 @@ ul
   50%
     transform: scale(1)
 //end preloader
+
+.help-block.form-error
+  //display: none
+  position: absolute
+  font-size: 12px
+  bottom: -18px
+  color: rgb(185, 74, 72)!important
+input.error
+  color: rgb(185, 74, 72)!important
+  &::placeholder
+    color: rgb(185, 74, 72)!important
+
+form
+  label
+    position: relative
 
 
 

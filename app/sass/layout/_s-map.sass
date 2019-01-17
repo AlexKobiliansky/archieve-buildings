@@ -1,0 +1,88 @@
+.s-map
+  position: relative
+
+#map
+  width: 100%
+  height: 925px
+  position: relative
+  background-color: #eee
+
+.contacts-block
+  position: absolute
+  background-color: #fff
+  padding: 45px 60px
+  max-width: 650px
+  //right: 330px
+  left: 536px
+  top: 110px
+  border-radius: 5px
+  box-shadow: 0 0 23px 5px rgba(#cecece, .5)
+  h3
+    font-size: 40px
+    font-family: "gothamProBlack", sans-serif
+    margin-bottom: 40px
+    text-align: center
+
+.contacts-items-wrap
+  display: flex
+  .side
+    width: 50%
+  .contacts-item
+    position: relative
+    margin-bottom: 15px
+    &:before
+      content: ''
+      position: absolute
+      +bg-cover()
+      left: 0
+    &.phone
+      padding-left: 33px
+      font-weight: 700
+      font-size: 20px
+      &:before
+        top: -2px
+        width: 27px
+        height: 27px
+        background-image: url('../img/icons/phone-icon.png')
+    &.mail
+      padding-left: 35px
+      &:before
+        width: 24px
+        height: 20px
+        background-image: url('../img/icons/mail-icon.png')
+    &.address
+      padding-left: 26px
+      &:before
+        width: 17px
+        height: 24px
+        background-image: url('../img/icons/addr-icon.png')
+  a
+    +mt(.3s)
+    &:hover
+      color: $accent-green
+
+
+.main-form
+  label
+    width: 100%
+    margin-bottom: 10px
+  textarea
+    resize: none
+    height: 70px
+  input, textarea
+    display: block
+    width: 100%
+    padding: 10px
+    border: 1px solid $accent-green
+    &::placeholder
+      color: #000
+  .form-labels-wrap
+    display: flex
+    justify-content: space-between
+    label
+      width: 48%
+  .btn
+    float: right
+    font-weight: 700
+  .help-block.form-error
+    display: none
