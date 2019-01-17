@@ -1,0 +1,102 @@
+.s-project
+  .section-title
+    margin-bottom: 25px
+
+.project-slide
+  height: 660px
+  +bg-cover()
+
+.project-slider
+  margin-bottom: 40px
+  .owl-nav
+    font-size: 48px
+    position: absolute
+    top: 195px
+    right: -77px
+    button.owl-prev, button.owl-next
+      width: 77px
+      height: 77px
+      line-height: 77px
+      background-color: $accent-green
+      color: #fff
+    button.owl-prev
+      color: $accent-green
+      background-color: $accent-darkblue
+  .owl-dots
+    position: absolute
+    top: 330px
+    right: -39px
+    .owl-dot
+      display: block
+      width: 7px
+      height: 7px
+      background-color: $accent-darkblue
+      margin-bottom: 12px
+      &.active
+        background-color: $accent-green
+
+
+.general-info
+  font-size: 22px
+  margin-bottom: 45px
+  position: relative
+  p
+    margin-bottom: 0
+  &-table
+    width: 100%
+    td
+      vertical-align: top
+    td:first-child
+      width: 70%
+  .btn
+    position: absolute
+    bottom: 8px
+    right: 0
+    text-align: center
+    font-size: 20px
+    font-weight: 700
+
+#project-tabs
+  ul
+    padding: 30px 130px
+    background-color: $accent-darkblue
+    color: #fff
+    display: flex
+    justify-content: space-between
+    font-size: 20px
+    position: relative
+    margin-bottom: 60px
+    &:before
+      content: ''
+      position: absolute
+      width: 65px
+      height: 105px
+      +bg-cover()
+      background-image: url('../img/after-img-1.png')
+      left: 45px
+      top: 29px
+  a
+    display: block
+    border: 2px solid $accent-green
+    padding: 12px 22px
+    width: 100%
+    white-space: nowrap
+  .ui-state-active
+    a
+      background: linear-gradient(left,#8ec328,#46ae37)
+      border-color: transparent
+      color: #000
+
+.project-tab-item
+  font-size: 22px
+  padding-left: 130px
+  padding-bottom: 150px
+  table
+    width: 100%
+  td
+    vertical-align: top
+  td:first-child
+    width: 40%
+  td:last-child
+    width: 60%
+    font-weight: 700

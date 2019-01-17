@@ -3,7 +3,28 @@
 
 /*==========  Desktop First  ==========*/
 
+@media screen and (max-width: 1650px)
+  .general-info
+    .btn
+      position: relative
+      top: 0
+      right: 0
+      bottom: 0
+      margin-top: 20px
+
+
 @media screen and (max-width: 1500px)
+
+  #project-tabs
+    ul
+      padding: 30px 50px
+      &:before
+        display: none
+  .project-tab-item
+    padding-left: 50px
+
+  .general-info
+    font-size: 18px
 
   .news-item-title
     font-size: 20px
@@ -59,6 +80,15 @@
 
 @media screen and (max-width: 1300px)
 
+  #project-tabs
+    ul
+      flex-wrap: wrap
+      padding-bottom: 8px
+    li
+      width: calc(50% - 11px)
+      text-align: center
+      margin-bottom: 22px
+
   .s-news
     &:before
       display: none
@@ -95,7 +125,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .general-info-table
+    margin-bottom: 20px
 
+  .general-info
+    .btn
+      margin-left: auto
+      display: block
 
   .contacts-block
     top: auto
@@ -156,6 +192,29 @@
   .main-head
     padding-right: 60px
 
+  .l-container
+    margin-right: 60px
+
+  .project-slider
+    .owl-nav
+      .owl-nav
+      font-size: 38px
+      top: 150px
+      right: -60px
+      button.owl-prev, button.owl-next
+        width: 60px
+        height: 60px
+        line-height: 38px
+        padding-bottom: 5px
+        display: inline-block
+        span
+          position: relative
+          top: -2px
+    .owl-dots
+      position: absolute
+      top: 265px
+      right: -33px
+
   .intro-slider
     .owl-nav
       font-size: 38px
@@ -188,6 +247,17 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  #project-tabs
+    ul
+      font-size: 20px
+  .project-tab-item
+    font-size: 18px
+
+  .general-info-table
+    td
+      &:first-child
+        width: 50%
+
   .toggle-mnu
     top: -4px
 
@@ -215,6 +285,19 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  #project-tabs
+    ul
+      flex-direction: column
+    li
+      width: 100%
+
+  .general-info-table
+    font-size: 16px
+    td:first-child
+      width: 50%
+    td:last-child
+      width: 50%
 
   .newproject-item
     &-img
@@ -254,6 +337,20 @@
       margin-bottom: 10px
 
 @media screen and (max-width: 480px)
+
+  #project-tabs
+    ul
+      font-size: 16px
+      padding: 22px 30px 8px 30px
+
+  .project-tab-item
+    padding-left: 0
+    padding-bottom: 50px
+    font-size: 16px
+
+  .general-info
+    p
+      margin-bottom: 7px
 
   .news-item
     &-title
@@ -365,6 +462,29 @@
   .main-head
     padding-left: 0
     padding-right: 0
+
+  .l-container
+    margin-left: 15px
+    margin-right: 15px
+
+  .project-slider
+    margin-bottom: 60px
+    .owl-nav
+      display: none
+    .owl-dots
+      right: auto
+      top: auto
+      left: 0
+      bottom: -44px
+      width: 100%
+      text-align: center
+      button.owl-dot
+        display: inline-block
+        margin-right: 15px
+        &:last-child
+          margin-right: 0
+  .project-slide
+    height: 400px
 
   .intro-slider
     .owl-nav
