@@ -1,0 +1,75 @@
+.s-news
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 65px
+    height: 105px
+    background-image: url('../img/after-img-1.png')
+    +bg-cover()
+    left: 67px
+    top: 65px
+
+.news-wrap
+  padding-left: 50px
+
+.news-item
+  border: 1px solid #dcdcdc
+  display: block
+  margin-bottom: 30px
+  p
+    margin-bottom: 0
+  &-img
+    height: 242px
+    display: block
+    +bg-cover()
+    position: relative
+  &-desc
+    display: block
+    padding: 12px 35px 27px
+  &-title
+    font-size: 24px
+    font-weight: 700
+    display: block
+    margin-bottom: 22px
+    color: $accent-green
+    line-height: 1
+  &-preview
+    display: block
+    height: 86px
+    overflow: hidden
+    margin-bottom: 22px
+    position: relative
+    &:after
+      content: '...'
+      position: absolute
+      width: 70px
+      padding-left: 10px
+      background-color: #fff
+      right: 0
+      bottom: 0
+  &-date
+    display: block
+    color: #5a5a5a
+  &:hover
+    .news-img-overlay
+      opacity: 1
+
+.news-img-overlay
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background-color: rgba($accent-darkblue, .9)
+  +mt(.6s)
+  display: flex
+  justify-content: center
+  align-items: center
+  opacity: 0
+  .more
+    color: $accent-green
+    font-size: 20px
+    display: block
+    border: 2px solid $accent-green
+    padding: 15px 28px
