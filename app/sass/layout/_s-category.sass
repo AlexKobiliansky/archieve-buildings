@@ -1,0 +1,264 @@
+.s-category
+  .newprojects-wrap
+    padding-left: 35px
+    margin-top: 0
+    padding-top: 40px
+    border-left: 1px solid #d2d2d2
+    padding-bottom: 90px
+  .filter-wrap
+    border-left: 1px solid #d2d2d2
+
+
+.filterform
+  background-color: $accent-darkblue
+  color: #fff
+  padding: 13px 40px 13px 140px
+  font-size: 17px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+  flex-wrap: wrap
+  .selectize-control.single
+    .selectize-input, .selectize-input.input-active
+      width: 165px
+      background-color: $accent-darkblue
+      color: #fff
+      border: 2px solid $accent-green
+      font-size: 20px
+      padding: 12px 40px 12px 17px
+      margin-top: 7px
+      border-radius: 0
+  .btn
+    height: 50px
+    margin-top: 12px
+    padding-left: 17px
+    padding-right: 17px
+    text-transform: none
+    font-weight: 700
+    min-width: auto
+  &:before
+    content: ''
+    position: absolute
+    width: 65px
+    height: 105px
+    +bg-cover()
+    background-image: url('../img/after-img-1.png')
+    left: 35px
+    top: 35px
+  .sm-buttons
+    width: 100%
+    justify-content: flex-end
+    align-items: center
+    a
+      margin-right: 30px
+      margin-left: 30px
+    button
+      margin-left: 30px
+
+
+.selectize-input.dropdown-active::before
+  display: none
+
+.selectize-control.single
+  .selectize-input
+    white-space: nowrap
+    overflow: hidden
+    &:after
+      width: 11px
+      height: 7px
+      +bg-cover()
+      background-image: url('../img/icons/select-arrow.png')
+      border: none
+      +mt(.3s)
+    &.input-active
+      &:after
+        transform: rotate(180deg)
+    .item
+      width: 100%
+      overflow: hidden
+
+.selectize-control.single .selectize-input input
+  display: none!important
+
+.selectize-dropdown
+  top: 57px!important
+  border-color: $accent-green
+  border-width: 2px
+  cursor: pointer
+  +mt(.3s)
+
+.selectize-dropdown [data-selectable].option
+  padding-top: 5px
+  padding-bottom: 5px
+  padding-left: 17px
+
+.selectize-dropdown .active
+  background-color: $accent-darkblue
+  color: $accent-green
+
+.selectize-dropdown-content
+  background-color: $accent-darkblue
+  color: #fff
+  font-size: 18px
+
+.filter-range
+  position: relative
+  top: -4px
+  .result
+    display: block
+    width: 165px
+    padding: 12px 17px
+    border: 2px solid $accent-green
+    margin-top: 7px
+    cursor: pointer
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 11px
+      height: 7px
+      +bg-cover()
+      background-image: url('../img/icons/select-arrow.png')
+      border: none
+      +mt(.3s)
+      right: 15px
+      top: calc(50% - 3.5px)
+  &.on
+    .result
+      &:after
+        transform: rotate(180deg)
+    .range-wrap
+      display: block
+
+.range
+  display: block
+
+.range-wrap
+  display: none
+  position: absolute
+  background-color: #fff
+  box-shadow: 0 0 20px 0 rgba(#000, .3)
+  width: 350px
+  padding: 55px 35px 0 25px
+  bottom: -125px
+  height: 110px
+  z-index: 3
+  &:before
+    content: ''
+    position: absolute
+    border: 20px solid transparent
+    border-bottom: 20px solid #fff
+    top: -40px
+    left: 64px
+
+.range-value
+  position: absolute
+  bottom: 15px
+  &.range-min
+    left: 15px
+  &.range-max
+    right: 25px
+
+.noUi-horizontal .noUi-handle
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  border: none
+  box-shadow: none
+  outline: none!important
+  cursor: pointer
+  top: -9px
+  &:before, &:after
+    display: none
+  &.noUi-handle-lower
+    background-color: #8ec328
+    right: -10px!important
+  &.noUi-handle-upper
+    right: -10px!important
+    background-color: #46ae37
+
+.noUi-target
+  border-radius: 0
+  border: none
+  box-shadow: none
+
+.noUi-connects
+  border-radius: 0
+  background-color: #f0f4f9
+  height: 2px
+
+.noUi-base
+  height: 2px
+  background-color: #f0f4f9
+
+.noUi-target
+  height: 2px
+
+.noUi-connect
+  background: linear-gradient(left,#8ec328,#46ae37)
+
+.noUi-tooltip
+  border: none
+  font-weight: 700
+  padding: 0
+  margin: 0
+  line-height: 1
+
+.range-value
+  color: #000
+
+.selectize-input input
+  color: transparent !important
+
+.reset-form
+  width: 20px
+  height: 20px
+  margin: 20px 10px 0
+  +bg-cover()
+  background-image: url('../img/icons/bg-reset.png')
+  +mt(.3s)
+  &:hover
+    background-image: url('../img/icons/bg-reset-hover.png')
+
+.more-params
+  width: 20px
+  height: 28px
+  margin: 20px 10px 0
+  +bg-cover()
+  background-image: url('../img/icons/bg-down.png')
+  +mt(.3s)
+  &:hover
+    background-image: url('../img/icons/bg-down-hover.png')
+
+.additional-info
+  padding-top: 40px
+  padding-left: 17px
+  .selectize-control
+    display: inline-block
+  select
+    margin-right: 30px
+  .selectize-input
+    width: 230px
+    border: none
+    padding: 5px
+    box-shadow: none
+    font-size: 16px
+    padding-left: 18px
+  .selectize-dropdown-content
+    font-size: 16px
+    max-height: inherit
+    background-color: #fff
+    color: #000
+  .selectize-dropdown .active
+    background-color: #fff
+    color: $accent-green
+  .selectize-dropdown
+    border-color: transparent
+    top: auto!important
+    padding-bottom: 10px
+  .projects-num
+    display: inline-block
+    vertical-align: top
+    margin-top: 5px
+    margin-left: 18px

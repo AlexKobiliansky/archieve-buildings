@@ -116,8 +116,92 @@ $(function() {
 
     $( "#project-tabs" ).tabs();
 
+
+    /**
+     * FILTER FORM start
+     */
+
+    var rangeSquare = document.getElementById('square');
+    var rangeStages = document.getElementById('stages');
+
+    noUiSlider.create(rangeSquare, {
+        start: [15, 200],
+        connect: true,
+        tooltips: true,
+        range: {
+            'min': 15,
+            'max': 200
+        },
+        format: wNumb({
+            decimals: 0,
+        })
+    });
+
+    var squareMin = document.getElementById('square-min'),
+        squareMax = document.getElementById('square-max');
+
+    rangeSquare.noUiSlider.on('update', function (values, handle) {
+        if (handle) {
+            squareMax.innerHTML = values[handle];
+        } else {
+            squareMin.innerHTML = values[handle];
+        }
+    });
+
+
+    noUiSlider.create(rangeStages, {
+        start: [1, 3],
+        connect: true,
+        tooltips: true,
+        step: 1,
+        range: {
+            'min': 1,
+            'max': 3
+        },
+        format: wNumb({
+            decimals: 0,
+        })
+    });
+
+    var stagesMin = document.getElementById('stages-min'),
+        stagesMax = document.getElementById('stages-max');
+
+    rangeStages.noUiSlider.on('update', function (values, handle) {
+        if (handle) {
+            stagesMax.innerHTML = values[handle];
+        } else {
+            stagesMin.innerHTML = values[handle];
+        }
+    });
+
+    $('select').selectize({});
+
+    $('.filter-range .result').on('click', function(){
+        var parent = $(this).parents('.filter-range');
+        parent.toggleClass('on');
+        parent.siblings('.filter-range').removeClass('on');
+    });
+
+
+        $(document).mouseup(function(e)
+        {
+            if (!$('.filter-range').is(e.target) && $('.filter-range').has(e.target).length === 0)
+            {
+                $('.filter-range').removeClass('on');
+            }
+        });
+
+
+
+    /**
+     * FILTER FORM end
+     */
+
+
+
+
     //E-mail Ajax Send
-    $("form").submit(function() { //Change
+    $(".contact-form").submit(function() { //Change
         var th = $(this);
         t = th.find(".btn").text();
         th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");

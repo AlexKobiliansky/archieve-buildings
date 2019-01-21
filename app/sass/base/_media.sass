@@ -15,6 +15,25 @@
 
 @media screen and (max-width: 1500px)
 
+  .filterform
+    padding-left: 30px
+    padding-right: 30px
+    font-size: 16px
+    &:before
+      display: none
+
+  .filterform .selectize-control.single .selectize-input, .filterform .selectize-control.single .selectize-input.input-active
+    font-size: 16px
+    width: 145px
+    padding-right: 30px
+
+  .selectize-dropdown-content
+    font-size: 14px
+
+  .filter-range .result
+    font-size: 16px
+    width: 145px
+
   #project-tabs
     ul
       padding: 30px 50px
@@ -80,6 +99,12 @@
 
 @media screen and (max-width: 1300px)
 
+  .range-wrap
+    left: -100px
+    &:before
+      left: 150px
+      top: -35px
+
   #project-tabs
     ul
       flex-wrap: wrap
@@ -124,6 +149,16 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .filterform
+    padding-bottom: 30px
+    label
+      width: 45%
+  .filterform .selectize-control.single .selectize-input, .filterform .selectize-control.single .selectize-input.input-active
+    width: 100%
+
+  .filter-range .result
+    width: 100%
 
   .general-info-table
     margin-bottom: 20px
@@ -247,6 +282,12 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .range-wrap
+    width: 100%
+    left: 0
+    &:before
+      left: 64px
+
   #project-tabs
     ul
       font-size: 20px
@@ -337,6 +378,31 @@
       margin-bottom: 10px
 
 @media screen and (max-width: 480px)
+
+  .s-category
+    .filter-wrap
+      border-left: none
+    .newprojects-wrap
+      border-left: none
+      padding-left: 0
+  .additional-info
+    padding-left: 0
+    .selectize-input
+      padding-left: 0
+    .projects-num
+      margin-left: 0
+
+
+  .filterform
+    label
+      width: 100%
+    .sm-buttons
+      justify-content: space-between
+      a
+        margin-right: 0
+        margin-left: 0
+      button
+        margin-left: 0
 
   #project-tabs
     ul
